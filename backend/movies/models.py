@@ -1,6 +1,14 @@
 from django.db import models
 
 # Create your models here.
-class Movie(models.model):
-    name = models.CharField(max_length=100, unique=True)
+class Movie(models.Model):
+    name = models.CharField(max_length=25, unique=True)
     password = models.CharField(max_length=100)
+    
+    
+
+class Watchlist(models.Model):
+    watch_list = models.ForeignKey(Movie)
+
+class Seen(models.Model):
+    watched = models.ForeignKey(Movie)
