@@ -1,6 +1,7 @@
 
-# bb110782
-
+# 
+config.py
+/home/wilkieg/GA/unit-5/react-django-app/react-django-back-end/backend/movies/confiig.py
 # Django #
 *.log
 *.pot
