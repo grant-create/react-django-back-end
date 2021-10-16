@@ -10,3 +10,5 @@ class MovieViewSet(viewsets.ModelViewSet):
     ]
     serializer_class = MovieSerializer
 
+
+
