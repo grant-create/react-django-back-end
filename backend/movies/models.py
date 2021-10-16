@@ -8,7 +8,7 @@ class Movie(models.Model):
     
 
 class Watchlist(models.Model):
-    watch_list = models.ForeignKey(Movie)
+    watch_list = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
 class Seen(models.Model):
-    watched = models.ForeignKey(Movie)
+    watched = models.ForeignKey(Movie, on_delete=models.CASCADE)
