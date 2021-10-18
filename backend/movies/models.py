@@ -12,7 +12,7 @@ from django.db import models
 # ref: https://www.youtube.com/watch?v=Uyei2iDA4Hs @ 9:00
 
 class Movie(models.Model):
-    id = models.IntegerField(primary_key=True)
+    # id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=250)
     runtime = models.CharField(max_length=200, blank=True)
     image = models.CharField(max_length=500, blank=True)
