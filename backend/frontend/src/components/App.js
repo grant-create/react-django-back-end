@@ -1,27 +1,23 @@
-import React, {Component} from 'react'
-import { ReactDOM } from 'react-dom'
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+
 
 import Header from './layout/Header'
 
-// class App extends Component {
-//     render(){
-//     return(
-//         <div>
-//             <Header />
-//         </div>
-//     ) 
-// }
-// }
+export class App extends Component {
+    render() {
+        return (
 
-// ReactDOM.render(<App />, document.getElementById('app'))
-
-export default function App(){
-
-
-    return(
-        <div>
-            <Header />
-
-        </div>
-    )
+            
+            <div>
+                <h1>React app from App.js</h1>
+                {/* <Header/> */}
+            </div>
+        )
+    }
 }
+
+
+
+
+ReactDOM.render(<App />, document.getElementById('app'))

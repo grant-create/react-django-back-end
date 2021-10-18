@@ -18,10 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+
+    path('', include('movies.urls')),
     path('', include('frontend.urls')),
-    # path('<str:name>', include('movies.urls')),
     path('admin/', admin.site.urls),
-    # path('', include('movies.urls')),
     
 ]
 
