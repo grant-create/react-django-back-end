@@ -27,12 +27,18 @@ def test(request):
     if request.method=='GET':
         return JsonResponse(MovieSerializer.data, safe=False)
 
-
+# post route to add new movies to DB
     elif request.method=='POST':
-
         new_data=JSONParser().parse(request)
         new_movie_serializer=MovieSerializer(data=new_data)
+
         if new_movie_serializer.is_valid():
             new_movie_serializer.save()
             return JsonResponse("Added Successfully",safe=False)
         return JsonResponse("Failed to Add",safe=False)
+
+# delete route to remove Movie from favorites
+    elif request.method=='DELETE':
+        movie_to_be_deleted=Movie.objects.get(id=id)
+        movie_to_be_deleted.delete()
+        return JsonResponse("Deleted Successfully",safe=False)

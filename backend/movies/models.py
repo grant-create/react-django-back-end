@@ -11,6 +11,8 @@ from django.db import models
 
 # ref: https://www.youtube.com/watch?v=Uyei2iDA4Hs @ 9:00
 
+# thinking of adding a user model to let each user have their own favorites.
+
 class Movie(models.Model):
     # id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=250)
