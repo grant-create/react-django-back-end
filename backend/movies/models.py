@@ -14,13 +14,14 @@ from django.db import models
 class Movie(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=250)
-    # password = models.CharField(max_length=100)
-    # genre = models.CharField(max_length=100, blank=True)
     runtime = models.CharField(max_length=200, blank=True)
     image = models.CharField(max_length=500, blank=True)
     
+
     # need to: python3 manage.py makemigrations movies
     # then, python3 manage.py migrate
+
+
 
 # class Watchlist(models.Model):
 #     watch_list = models.ForeignKey(Movie, on_delete=models.CASCADE)

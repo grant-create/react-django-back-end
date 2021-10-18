@@ -26,3 +26,13 @@ def index(request):
 def test(request):
     if request.method=='GET':
         return JsonResponse(MovieSerializer.data, safe=False)
+
+
+    elif request.method=='POST':
+
+        new_data=JSONParser().parse(request)
+        new_movie_serializer=MovieSerializer(data=new_data)
+        if new_movie_serializer.is_valid():
+            new_movie_serializer.save()
+            return JsonResponse("Added Successfully",safe=False)
+        return JsonResponse("Failed to Add",safe=False)
